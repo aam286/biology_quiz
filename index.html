@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sexual vs Asexual Reproduction Quiz</title>
+  <title>Reproduction in Biology - Comprehensive Quiz</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -23,28 +23,46 @@
       justify-content: center;
       gap: 20px;
       padding: 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
       text-decoration: none;
+      font-weight: bold;
     }
     .container {
-      padding: 20px;
+      padding: 100px 20px 20px;
       max-width: 900px;
       margin: auto;
+    }
+    .info-section {
+      background: #e0eafc;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .result-section {
+      background: #dfe6e9;
+      padding: 10px;
+      position: sticky;
+      top: 70px;
+      z-index: 1000;
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
     .quiz-section {
       background: #e0f7fa;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 8px;
-    }
-    .result-section {
-      background: #dfe6e9;
-      padding: 20px;
       text-align: center;
-      margin-top: 30px;
-      border-radius: 8px;
+    }
+    .quiz-section p {
+      margin-bottom: 10px;
     }
     .result-section span {
       font-weight: bold;
@@ -74,216 +92,23 @@
 <body>
   <header>
     <h1>Reproduction in Biology - Comprehensive Quiz</h1>
-    <p>Test your knowledge on sexual and asexual reproduction with 20 questions!</p>
+    <p>Test your knowledge on sex, hormones, reproductive systems, and mating behaviors with 25 interactive questions!</p>
   </header>
 
   <nav>
+    <a href="#info">Information</a>
     <a href="#quiz">Quiz</a>
   </nav>
 
   <div class="container">
-    <section id="quiz">
-      <h2>Quiz: Reproduction in Biology</h2>
-
-      <div class="quiz-section" id="question-1">
-        <p>1. Which of the following is asexual reproduction?</p>
-        <button onclick="checkAnswer(this, 'correct', 1, 'Binary Fission')">Binary Fission</button>
-        <button onclick="checkAnswer(this, 'incorrect', 1, 'Binary Fission')">Fertilization</button>
-        <button onclick="checkAnswer(this, 'incorrect', 1, 'Binary Fission')">Pollination</button>
-        <p class="answer-feedback" id="feedback-1"></p>
-      </div>
-
-      <div class="quiz-section" id="question-2">
-        <p>2. How many parents are involved in sexual reproduction?</p>
-        <button onclick="checkAnswer(this, 'correct', 2, 'Two')">Two</button>
-        <button onclick="checkAnswer(this, 'incorrect', 2, 'Two')">One</button>
-        <button onclick="checkAnswer(this, 'incorrect', 2, 'Two')">Three</button>
-        <p class="answer-feedback" id="feedback-2"></p>
-      </div>
-
-      <div class="quiz-section" id="question-3">
-        <p>3. Which reproduction method promotes genetic diversity?</p>
-        <button onclick="checkAnswer(this, 'correct', 3, 'Sexual')">Sexual</button>
-        <button onclick="checkAnswer(this, 'incorrect', 3, 'Sexual')">Asexual</button>
-        <button onclick="checkAnswer(this, 'incorrect', 3, 'Sexual')">Budding</button>
-        <p class="answer-feedback" id="feedback-3"></p>
-      </div>
-
-      <div class="quiz-section" id="question-4">
-        <p>4. What is binary fission?</p>
-        <button onclick="checkAnswer(this, 'correct', 4, 'Asexual Reproduction')">Asexual Reproduction</button>
-        <button onclick="checkAnswer(this, 'incorrect', 4, 'Asexual Reproduction')">Sexual Reproduction</button>
-        <button onclick="checkAnswer(this, 'incorrect', 4, 'Asexual Reproduction')">Meiosis</button>
-        <p class="answer-feedback" id="feedback-4"></p>
-      </div>
-      <div class="quiz-section" id="question-5">
-        <p>5. Which organ produces sperm in males?</p>
-        <button onclick="checkAnswer(this, 'correct', 5, 'Testes')">Testes</button>
-        <button onclick="checkAnswer(this, 'incorrect', 5, 'Testes')">Ovaries</button>
-        <button onclick="checkAnswer(this, 'incorrect', 5, 'Testes')">Uterus</button>
-        <p class="answer-feedback" id="feedback-5"></p>
-      </div>
-
-      <div class="quiz-section" id="question-6">
-        <p>6. Which hormone is primarily responsible for the development of male secondary sexual characteristics?</p>
-        <button onclick="checkAnswer(this, 'correct', 6, 'Testosterone')">Testosterone</button>
-        <button onclick="checkAnswer(this, 'incorrect', 6, 'Testosterone')">Estrogen</button>
-        <button onclick="checkAnswer(this, 'incorrect', 6, 'Testosterone')">Progesterone</button>
-        <p class="answer-feedback" id="feedback-6"></p>
-      </div>
-
-      <div class="quiz-section" id="question-7">
-        <p>7. What is the primary site of fertilization in females?</p>
-        <button onclick="checkAnswer(this, 'correct', 7, 'Fallopian tubes')">Fallopian tubes</button>
-        <button onclick="checkAnswer(this, 'incorrect', 7, 'Fallopian tubes')">Uterus</button>
-        <button onclick="checkAnswer(this, 'incorrect', 7, 'Fallopian tubes')">Cervix</button>
-        <p class="answer-feedback" id="feedback-7"></p>
-      </div>
-
-      <div class="quiz-section" id="question-8">
-        <p>8. Which structure in the male reproductive system stores and matures sperm?</p>
-        <button onclick="checkAnswer(this, 'correct', 8, 'Epididymis')">Epididymis</button>
-        <button onclick="checkAnswer(this, 'incorrect', 8, 'Epididymis')">Prostate</button>
-        <button onclick="checkAnswer(this, 'incorrect', 8, 'Epididymis')">Seminal Vesicle</button>
-        <p class="answer-feedback" id="feedback-8"></p>
-      </div>
-
-      <div class="quiz-section" id="question-9">
-        <p>9. Which hormone triggers ovulation in females?</p>
-        <button onclick="checkAnswer(this, 'correct', 9, 'Luteinizing hormone')">Luteinizing hormone</button>
-        <button onclick="checkAnswer(this, 'incorrect', 9, 'Luteinizing hormone')">Testosterone</button>
-        <button onclick="checkAnswer(this, 'incorrect', 9, 'Luteinizing hormone')">Follicle-stimulating hormone</button>
-        <p class="answer-feedback" id="feedback-9"></p>
-      </div>
-
-      <div class="quiz-section" id="question-10">
-        <p>10. What is the main function of the clitoris in females?</p>
-        <button onclick="checkAnswer(this, 'correct', 10, 'Sexual pleasure')">Sexual pleasure</button>
-        <button onclick="checkAnswer(this, 'incorrect', 10, 'Sexual pleasure')">Urination</button>
-        <button onclick="checkAnswer(this, 'incorrect', 10, 'Sexual pleasure')">Reproduction</button>
-        <p class="answer-feedback" id="feedback-10"></p>
-      </div>
-
-      <div class="quiz-section" id="question-11">
-        <p>11. What is the average length of the menstrual cycle?</p>
-        <button onclick="checkAnswer(this, 'correct', 11, '28 days')">28 days</button>
-        <button onclick="checkAnswer(this, 'incorrect', 11, '28 days')">14 days</button>
-        <button onclick="checkAnswer(this, 'incorrect', 11, '28 days')">35 days</button>
-        <p class="answer-feedback" id="feedback-11"></p>
-      </div>
-
-      <div class="quiz-section" id="question-12">
-        <p>12. Which animal is known for lifelong monogamy?</p>
-        <button onclick="checkAnswer(this, 'correct', 12, 'Albatross')">Albatross</button>
-        <button onclick="checkAnswer(this, 'incorrect', 12, 'Albatross')">Lion</button>
-        <button onclick="checkAnswer(this, 'incorrect', 12, 'Albatross')">Rabbit</button>
-        <p class="answer-feedback" id="feedback-12"></p>
-      </div>
-
-      <div class="quiz-section" id="question-13">
-        <p>13. What is the orgasm gap?</p>
-        <button onclick="checkAnswer(this, 'correct', 13, 'Difference in orgasm frequency between men and women')">Difference in orgasm frequency between men and women</button>
-        <button onclick="checkAnswer(this, 'incorrect', 13, 'Difference in orgasm frequency between men and women')">Time taken to reach orgasm</button>
-        <button onclick="checkAnswer(this, 'incorrect', 13, 'Difference in orgasm frequency between men and women')">Duration of orgasm</button>
-        <p class="answer-feedback" id="feedback-13"></p>
-      </div>
-
-      <div class="quiz-section" id="question-14">
-        <p>14. What is the purpose of the prostate gland?</p>
-        <button onclick="checkAnswer(this, 'correct', 14, 'Produces fluid that nourishes sperm')">Produces fluid that nourishes sperm</button>
-        <button onclick="checkAnswer(this, 'incorrect', 14, 'Produces fluid that nourishes sperm')">Produces testosterone</button>
-        <button onclick="checkAnswer(this, 'incorrect', 14, 'Produces fluid that nourishes sperm')">Produces eggs</button>
-        <p class="answer-feedback" id="feedback-14"></p>
-      </div>
-
-      <div class="quiz-section" id="question-15">
-        <p>15. What is the most common mating system in mammals?</p>
-        <button onclick="checkAnswer(this, 'correct', 15, 'Polygyny')">Polygyny</button>
-        <button onclick="checkAnswer(this, 'incorrect', 15, 'Polygyny')">Monogamy</button>
-        <button onclick="checkAnswer(this, 'incorrect', 15, 'Polygyny')">Polyandry</button>
-        <p class="answer-feedback" id="feedback-15"></p>
-      </div>
-
-      <div class="quiz-section" id="question-16">
-        <p>16. Which hormone is known as the 'bonding hormone'?</p>
-        <button onclick="checkAnswer(this, 'correct', 16, 'Oxytocin')">Oxytocin</button>
-        <button onclick="checkAnswer(this, 'incorrect', 16, 'Oxytocin')">Estrogen</button>
-        <button onclick="checkAnswer(this, 'incorrect', 16, 'Oxytocin')">Progesterone</button>
-        <p class="answer-feedback" id="feedback-16"></p>
-      </div>
-
-      <div class="quiz-section" id="question-17">
-        <p>17. What is sperm competition?</p>
-        <button onclick="checkAnswer(this, 'correct', 17, 'Competition between sperm to fertilize an egg')">Competition between sperm to fertilize an egg</button>
-        <button onclick="checkAnswer(this, 'incorrect', 17, 'Competition between sperm to fertilize an egg')">Competition between males for mating</button>
-        <button onclick="checkAnswer(this, 'incorrect', 17, 'Competition between sperm to fertilize an egg')">Competition between females for mating</button>
-        <p class="answer-feedback" id="feedback-17"></p>
-      </div>
-
-      <div class="quiz-section" id="question-18">
-        <p>18. What is the female equivalent of the male penis in terms of sexual pleasure?</p>
-        <button onclick="checkAnswer(this, 'correct', 18, 'Clitoris')">Clitoris</button>
-        <button onclick="checkAnswer(this, 'incorrect', 18, 'Clitoris')">Uterus</button>
-        <button onclick="checkAnswer(this, 'incorrect', 18, 'Clitoris')">Cervix</button>
-        <p class="answer-feedback" id="feedback-18"></p>
-      </div>
-
-      <div class="quiz-section" id="question-19">
-        <p>19. In which part of the male body are sperm cells produced?</p>
-        <button onclick="checkAnswer(this, 'correct', 19, 'Seminiferous tubules')">Seminiferous tubules</button>
-        <button onclick="checkAnswer(this, 'incorrect', 19, 'Seminiferous tubules')">Urethra</button>
-        <button onclick="checkAnswer(this, 'incorrect', 19, 'Seminiferous tubules')">Vas deferens</button>
-        <p class="answer-feedback" id="feedback-19"></p>
-      </div>
-
-      <div class="quiz-section" id="question-20">
-        <p>20. What is copulatory lock?</p>
-        <button onclick="checkAnswer(this, 'correct', 20, 'Temporary physical binding of male and female during mating')">Temporary physical binding of male and female during mating</button>
-        <button onclick="checkAnswer(this, 'incorrect', 20, 'Temporary physical binding of male and female during mating')">Hormonal imbalance</button>
-        <button onclick="checkAnswer(this, 'incorrect', 20, 'Temporary physical binding of male and female during mating')">Reproductive tract infection</button>
-        <p class="answer-feedback" id="feedback-20"></p>
-      </div>
-
-      <div class="quiz-section" id="question-21">
-        <p>21. What type of mating system do prairie voles exhibit?</p>
-        <button onclick="checkAnswer(this, 'correct', 21, 'Monogamy')">Monogamy</button>
-        <button onclick="checkAnswer(this, 'incorrect', 21, 'Monogamy')">Polygyny</button>
-        <button onclick="checkAnswer(this, 'incorrect', 21, 'Monogamy')">Promiscuity</button>
-        <p class="answer-feedback" id="feedback-21"></p>
-      </div>
-
-      <div class="quiz-section" id="question-22">
-        <p>22. What is the purpose of seminal fluid?</p>
-        <button onclick="checkAnswer(this, 'correct', 22, 'Nourishes and protects sperm')">Nourishes and protects sperm</button>
-        <button onclick="checkAnswer(this, 'incorrect', 22, 'Nourishes and protects sperm')">Provides oxygen to sperm</button>
-        <button onclick="checkAnswer(this, 'incorrect', 22, 'Nourishes and protects sperm')">Produces hormones</button>
-        <p class="answer-feedback" id="feedback-22"></p>
-      </div>
-
-      <div class="quiz-section" id="question-23">
-        <p>23. Which hormone is released in large amounts during female orgasm?</p>
-        <button onclick="checkAnswer(this, 'correct', 23, 'Oxytocin')">Oxytocin</button>
-        <button onclick="checkAnswer(this, 'incorrect', 23, 'Oxytocin')">Testosterone</button>
-        <button onclick="checkAnswer(this, 'incorrect', 23, 'Oxytocin')">Estrogen</button>
-        <p class="answer-feedback" id="feedback-23"></p>
-      </div>
-
-      <div class="quiz-section" id="question-24">
-        <p>24. What is the primary function of the uterus?</p>
-        <button onclick="checkAnswer(this, 'correct', 24, 'House and nourish a developing fetus')">House and nourish a developing fetus</button>
-        <button onclick="checkAnswer(this, 'incorrect', 24, 'House and nourish a developing fetus')">Produce sperm</button>
-        <button onclick="checkAnswer(this, 'incorrect', 24, 'House and nourish a developing fetus')">Regulate hormones</button>
-        <p class="answer-feedback" id="feedback-24"></p>
-      </div>
-      <div class="quiz-section" id="question-25">
-        <p>25. Which hormone is closely linked with sexual desire and arousal in both men and women?</p>
-        <button onclick="checkAnswer(this, 'correct', 25, 'Testosterone')">Testosterone</button>
-        <button onclick="checkAnswer(this, 'incorrect', 25, 'Testosterone')">Estrogen</button>
-        <button onclick="checkAnswer(this, 'incorrect', 25, 'Testosterone')">Progesterone</button>
-        <p class="answer-feedback" id="feedback-25"></p>
-      </div>
-       
-
+    <section id="info" class="info-section">
+      <h2>Understanding Reproduction in Biology</h2>
+      <p>
+        Reproduction is a vital biological process that ensures the continuity of species. It can be classified into two main types: sexual and asexual reproduction. Sexual reproduction involves the combination of genetic material from two parents, leading to genetic diversity. In contrast, asexual reproduction requires only one parent and produces genetically identical offspring.
+      </p>
+      <p>
+        Hormones play a crucial role in regulating reproductive functions in both males and females. Testosterone, estrogen, and oxytocin are some of the key hormones influencing sexual behavior, development, and reproductive cycles. Additionally, mating strategies vary across species, ranging from monogamy and polygyny to promiscuity.
+      </p>
     </section>
 
     <section class="result-section">
@@ -291,6 +116,211 @@
       <p>Correct: <span id="correct-count">0</span></p>
       <p>Incorrect: <span id="incorrect-count">0</span></p>
       <p>Status: <span id="status">Not started</span></p>
+    </section>
+
+    <section id="quiz">
+      <h2>Quiz: Reproduction in Biology</h2>
+
+      <div class="quiz-section" id="question-1">
+        <p>1. Which organ produces sperm in males?</p>
+        <button onclick="checkAnswer(this, 'correct', 1, 'Testes')">Testes</button>
+        <button onclick="checkAnswer(this, 'incorrect', 1, 'Testes')">Ovaries</button>
+        <button onclick="checkAnswer(this, 'incorrect', 1, 'Testes')">Uterus</button>
+        <p class="answer-feedback" id="feedback-1"></p>
+      </div>
+
+      <div class="quiz-section" id="question-2">
+        <p>2. Which hormone is primarily responsible for the development of male secondary sexual characteristics?</p>
+        <button onclick="checkAnswer(this, 'correct', 2, 'Testosterone')">Testosterone</button>
+        <button onclick="checkAnswer(this, 'incorrect', 2, 'Testosterone')">Estrogen</button>
+        <button onclick="checkAnswer(this, 'incorrect', 2, 'Testosterone')">Progesterone</button>
+        <p class="answer-feedback" id="feedback-2"></p>
+      </div>
+
+      <div class="quiz-section" id="question-3">
+        <p>3. What is the primary site of fertilization in females?</p>
+        <button onclick="checkAnswer(this, 'correct', 3, 'Fallopian tubes')">Fallopian tubes</button>
+        <button onclick="checkAnswer(this, 'incorrect', 3, 'Fallopian tubes')">Uterus</button>
+        <button onclick="checkAnswer(this, 'incorrect', 3, 'Fallopian tubes')">Cervix</button>
+        <p class="answer-feedback" id="feedback-3"></p>
+      </div>
+
+      <div class="quiz-section" id="question-4">
+        <p>4. Which structure in the male reproductive system stores and matures sperm?</p>
+        <button onclick="checkAnswer(this, 'correct', 4, 'Epididymis')">Epididymis</button>
+        <button onclick="checkAnswer(this, 'incorrect', 4, 'Epididymis')">Prostate</button>
+        <button onclick="checkAnswer(this, 'incorrect', 4, 'Epididymis')">Seminal Vesicle</button>
+        <p class="answer-feedback" id="feedback-4"></p>
+      </div>
+
+      <div class="quiz-section" id="question-5">
+        <p>5. Which hormone triggers ovulation in females?</p>
+        <button onclick="checkAnswer(this, 'correct', 5, 'Luteinizing hormone')">Luteinizing hormone</button>
+        <button onclick="checkAnswer(this, 'incorrect', 5, 'Luteinizing hormone')">Testosterone</button>
+        <button onclick="checkAnswer(this, 'incorrect', 5, 'Luteinizing hormone')">Follicle-stimulating hormone</button>
+        <p class="answer-feedback" id="feedback-5"></p>
+      </div>
+
+      <div class="quiz-section" id="question-6">
+        <p>6. What is the main function of the clitoris in females?</p>
+        <button onclick="checkAnswer(this, 'correct', 6, 'Sexual pleasure')">Sexual pleasure</button>
+        <button onclick="checkAnswer(this, 'incorrect', 6, 'Sexual pleasure')">Urination</button>
+        <button onclick="checkAnswer(this, 'incorrect', 6, 'Sexual pleasure')">Reproduction</button>
+        <p class="answer-feedback" id="feedback-6"></p>
+      </div>
+
+      <div class="quiz-section" id="question-7">
+        <p>7. What is the average length of the menstrual cycle?</p>
+        <button onclick="checkAnswer(this, 'correct', 7, '28 days')">28 days</button>
+        <button onclick="checkAnswer(this, 'incorrect', 7, '28 days')">14 days</button>
+        <button onclick="checkAnswer(this, 'incorrect', 7, '28 days')">35 days</button>
+        <p class="answer-feedback" id="feedback-7"></p>
+      </div>
+
+      <div class="quiz-section" id="question-8">
+        <p>8. Which hormone is known as the 'bonding hormone'?</p>
+        <button onclick="checkAnswer(this, 'correct', 8, 'Oxytocin')">Oxytocin</button>
+        <button onclick="checkAnswer(this, 'incorrect', 8, 'Oxytocin')">Estrogen</button>
+        <button onclick="checkAnswer(this, 'incorrect', 8, 'Oxytocin')">Progesterone</button>
+        <p class="answer-feedback" id="feedback-8"></p>
+      </div>
+
+      <div class="quiz-section" id="question-9">
+        <p>9. What is sperm competition?</p>
+        <button onclick="checkAnswer(this, 'correct', 9, 'Competition between sperm to fertilize an egg')">Competition between sperm to fertilize an egg</button>
+        <button onclick="checkAnswer(this, 'incorrect', 9, 'Competition between sperm to fertilize an egg')">Competition between males for mating</button>
+        <button onclick="checkAnswer(this, 'incorrect', 9, 'Competition between sperm to fertilize an egg')">Competition between females for mating</button>
+        <p class="answer-feedback" id="feedback-9"></p>
+      </div>
+
+      <div class="quiz-section" id="question-10">
+        <p>10. What is the primary function of the uterus?</p>
+        <button onclick="checkAnswer(this, 'correct', 10, 'House and nourish a developing fetus')">House and nourish a developing fetus</button>
+        <button onclick="checkAnswer(this, 'incorrect', 10, 'House and nourish a developing fetus')">Produce sperm</button>
+        <button onclick="checkAnswer(this, 'incorrect', 10, 'House and nourish a developing fetus')">Regulate hormones</button>
+        <p class="answer-feedback" id="feedback-10"></p>
+      </div>
+
+      <section class="quiz-section" id="question-11">
+        <p>11. What is the average length of the menstrual cycle?</p>
+        <button onclick="checkAnswer(this, 'correct', 11, '28 days')">28 days</button>
+        <button onclick="checkAnswer(this, 'incorrect', 11, '28 days')">14 days</button>
+        <button onclick="checkAnswer(this, 'incorrect', 11, '28 days')">35 days</button>
+        <p class="answer-feedback" id="feedback-11"></p>
+      </section>
+
+      <section class="quiz-section" id="question-12">
+        <p>12. Which animal is known for lifelong monogamy?</p>
+        <button onclick="checkAnswer(this, 'correct', 12, 'Albatross')">Albatross</button>
+        <button onclick="checkAnswer(this, 'incorrect', 12, 'Albatross')">Lion</button>
+        <button onclick="checkAnswer(this, 'incorrect', 12, 'Albatross')">Rabbit</button>
+        <p class="answer-feedback" id="feedback-12"></p>
+      </section>
+
+      <section class="quiz-section" id="question-13">
+        <p>13. What is the orgasm gap?</p>
+        <button onclick="checkAnswer(this, 'correct', 13, 'Difference in orgasm frequency between men and women')">Difference in orgasm frequency between men and women</button>
+        <button onclick="checkAnswer(this, 'incorrect', 13, 'Difference in orgasm frequency between men and women')">Time taken to reach orgasm</button>
+        <button onclick="checkAnswer(this, 'incorrect', 13, 'Difference in orgasm frequency between men and women')">Duration of orgasm</button>
+        <p class="answer-feedback" id="feedback-13"></p>
+      </section>
+
+      <section class="quiz-section" id="question-14">
+        <p>14. What is the purpose of the prostate gland?</p>
+        <button onclick="checkAnswer(this, 'correct', 14, 'Produces fluid that nourishes sperm')">Produces fluid that nourishes sperm</button>
+        <button onclick="checkAnswer(this, 'incorrect', 14, 'Produces fluid that nourishes sperm')">Produces testosterone</button>
+        <button onclick="checkAnswer(this, 'incorrect', 14, 'Produces fluid that nourishes sperm')">Produces eggs</button>
+        <p class="answer-feedback" id="feedback-14"></p>
+      </section>
+
+      <section class="quiz-section" id="question-15">
+        <p>15. What is the most common mating system in mammals?</p>
+        <button onclick="checkAnswer(this, 'correct', 15, 'Polygyny')">Polygyny</button>
+        <button onclick="checkAnswer(this, 'incorrect', 15, 'Polygyny')">Monogamy</button>
+        <button onclick="checkAnswer(this, 'incorrect', 15, 'Polygyny')">Polyandry</button>
+        <p class="answer-feedback" id="feedback-15"></p>
+      </section>
+
+      <section class="quiz-section" id="question-16">
+        <p>16. Which hormone is known as the 'bonding hormone'?</p>
+        <button onclick="checkAnswer(this, 'correct', 16, 'Oxytocin')">Oxytocin</button>
+        <button onclick="checkAnswer(this, 'incorrect', 16, 'Oxytocin')">Estrogen</button>
+        <button onclick="checkAnswer(this, 'incorrect', 16, 'Oxytocin')">Progesterone</button>
+        <p class="answer-feedback" id="feedback-16"></p>
+      </section>
+
+      <section class="quiz-section" id="question-17">
+        <p>17. What is sperm competition?</p>
+        <button onclick="checkAnswer(this, 'correct', 17, 'Competition between sperm to fertilize an egg')">Competition between sperm to fertilize an egg</button>
+        <button onclick="checkAnswer(this, 'incorrect', 17, 'Competition between sperm to fertilize an egg')">Competition between males for mating</button>
+        <button onclick="checkAnswer(this, 'incorrect', 17, 'Competition between sperm to fertilize an egg')">Competition between females for mating</button>
+        <p class="answer-feedback" id="feedback-17"></p>
+      </section>
+
+      <section class="quiz-section" id="question-18">
+        <p>18. What is the female equivalent of the male penis in terms of sexual pleasure?</p>
+        <button onclick="checkAnswer(this, 'correct', 18, 'Clitoris')">Clitoris</button>
+        <button onclick="checkAnswer(this, 'incorrect', 18, 'Clitoris')">Uterus</button>
+        <button onclick="checkAnswer(this, 'incorrect', 18, 'Clitoris')">Cervix</button>
+        <p class="answer-feedback" id="feedback-18"></p>
+      </section>
+
+      <section class="quiz-section" id="question-19">
+        <p>19. In which part of the male body are sperm cells produced?</p>
+        <button onclick="checkAnswer(this, 'correct', 19, 'Seminiferous tubules')">Seminiferous tubules</button>
+        <button onclick="checkAnswer(this, 'incorrect', 19, 'Seminiferous tubules')">Urethra</button>
+        <button onclick="checkAnswer(this, 'incorrect', 19, 'Seminiferous tubules')">Vas deferens</button>
+        <p class="answer-feedback" id="feedback-19"></p>
+      </section>
+
+      <section class="quiz-section" id="question-20">
+        <p>20. What is copulatory lock?</p>
+        <button onclick="checkAnswer(this, 'correct', 20, 'Temporary physical binding of male and female during mating')">Temporary physical binding of male and female during mating</button>
+        <button onclick="checkAnswer(this, 'incorrect', 20, 'Temporary physical binding of male and female during mating')">Hormonal imbalance</button>
+        <button onclick="checkAnswer(this, 'incorrect', 20, 'Temporary physical binding of male and female during mating')">Reproductive tract infection</button>
+        <p class="answer-feedback" id="feedback-20"></p>
+      </section>
+
+      <section class="quiz-section" id="question-21">
+        <p>21. What type of mating system do prairie voles exhibit?</p>
+        <button onclick="checkAnswer(this, 'correct', 21, 'Monogamy')">Monogamy</button>
+        <button onclick="checkAnswer(this, 'incorrect', 21, 'Monogamy')">Polygyny</button>
+        <button onclick="checkAnswer(this, 'incorrect', 21, 'Monogamy')">Promiscuity</button>
+        <p class="answer-feedback" id="feedback-21"></p>
+      </section>
+
+      <section class="quiz-section" id="question-22">
+        <p>22. What is the purpose of seminal fluid?</p>
+        <button onclick="checkAnswer(this, 'correct', 22, 'Nourishes and protects sperm')">Nourishes and protects sperm</button>
+        <button onclick="checkAnswer(this, 'incorrect', 22, 'Nourishes and protects sperm')">Provides oxygen to sperm</button>
+        <button onclick="checkAnswer(this, 'incorrect', 22, 'Nourishes and protects sperm')">Produces hormones</button>
+        <p class="answer-feedback" id="feedback-22"></p>
+      </section>
+
+      <section class="quiz-section" id="question-23">
+        <p>23. Which hormone is released in large amounts during female orgasm?</p>
+        <button onclick="checkAnswer(this, 'correct', 23, 'Oxytocin')">Oxytocin</button>
+        <button onclick="checkAnswer(this, 'incorrect', 23, 'Oxytocin')">Testosterone</button>
+        <button onclick="checkAnswer(this, 'incorrect', 23, 'Oxytocin')">Estrogen</button>
+        <p class="answer-feedback" id="feedback-23"></p>
+      </section>
+
+      <section class="quiz-section" id="question-24">
+        <p>24. What is the primary function of the uterus?</p>
+        <button onclick="checkAnswer(this, 'correct', 24, 'House and nourish a developing fetus')">House and nourish a developing fetus</button>
+        <button onclick="checkAnswer(this, 'incorrect', 24, 'House and nourish a developing fetus')">Produce sperm</button>
+        <button onclick="checkAnswer(this, 'incorrect', 24, 'House and nourish a developing fetus')">Regulate hormones</button>
+        <p class="answer-feedback" id="feedback-24"></p>
+      </section>
+
+      <section class="quiz-section" id="question-25">
+        <p>25. Which hormone is closely linked with sexual desire and arousal in both men and women?</p>
+        <button onclick="checkAnswer(this, 'correct', 25, 'Testosterone')">Testosterone</button>
+        <button onclick="checkAnswer(this, 'incorrect', 25, 'Testosterone')">Estrogen</button>
+        <button onclick="checkAnswer(this, 'incorrect', 25, 'Testosterone')">Progesterone</button>
+        <p class="answer-feedback" id="feedback-25"></p>
+      </section>
+
     </section>
   </div>
 
